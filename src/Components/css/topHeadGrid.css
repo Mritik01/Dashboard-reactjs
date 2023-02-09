@@ -1,0 +1,14 @@
+.container-fluid {
+    width: 82% !important;
+    padding-left: 35px !important;
+    float: right;
+}
+
+@media (max-width: 1200px) {
+
+    .container-fluid {
+        width: 100% !important;
+        float: right;
+        transition: width 0.25s ease-in, background-color 0.25s ease-in;
+    }
+}

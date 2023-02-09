@@ -11,9 +11,9 @@ function App() {
     <>
       <NavBar />
       <BackgroundColor />
-      {/* <SideDashboard /> */}
+      <SideDashboard />
       <TopHeadGrid />
-      <Footer/>
+      {/* <Footer/> */}
     </>
   );
 }

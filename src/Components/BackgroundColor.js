@@ -1,10 +1,10 @@
 import React from "react";
-import "./backgroundColor.css";
+import "./css/style.css";
 
 function BackgroundColor() {
     return (
         <>
-            <div className="bg-primary position-absolute w-100 background-half-color">
+            <div className="min-height-300 bg-primary position-absolute w-100">
             </div>
         </>
     )
