@@ -10,5 +10,7 @@
         width: 100% !important;
         float: right;
         transition: width 0.25s ease-in, background-color 0.25s ease-in;
+        padding-left: 24px !important;
     }
+
 }

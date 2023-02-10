@@ -4006,7 +4006,7 @@ fieldset:disabled .btn {
 }
 
 .collapse:not(.show) {
-  display: none;
+  display: block;
 }
 
 .collapsing {
@@ -22447,6 +22447,8 @@ hr.horizontal.gray-light {
 @media (max-width: 767.98px) {
   .navbar-collapse {
     position: relative;
+    display: flex;
+    flex-direction: row;
   }
 
   .navbar-collapse .navbar-nav {

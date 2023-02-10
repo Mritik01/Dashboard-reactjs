@@ -9,8 +9,7 @@
 }
 
 @media (max-width: 1200px) {
-
     .sidenav {
-        display: none !important;
+        width: 0px !important;
     }
 }

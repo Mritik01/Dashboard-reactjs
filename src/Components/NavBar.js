@@ -1,7 +1,25 @@
 import React from "react";
-import "./css/style.css";
+import "./assets/css/style.css";
+import { useState } from 'react';
+
 
 function NavBar() {
+
+    const [isDisplayed, setState] = useState(false);
+    function hideSideNavbar() {
+
+        if (isDisplayed) {
+            let item = document.getElementById('sidenav-main').style.width = "210px";
+            console.log('d');
+            setState(false);
+        } else {
+            let item = document.getElementById('sidenav-main');
+            item.setAttribute("style", "display: block !important; width: 210px !important;");
+            setState(true);
+        }
+
+    }
+
     return (
         <nav className="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl  " id="navbarBlur" data-scroll="false">
             <div className="container-fluid nav-bar-container-fluid py-1 px-3">
@@ -19,7 +37,7 @@ function NavBar() {
                             <input type="text" className="form-control" placeholder="Type here..." />
                         </div>
                     </div>
-                    <ul className="navbar-nav  justify-content-end">
+                    <ul className="navbar-nav top-icons  justify-content-end">
                         <li className="nav-item d-flex align-items-center">
                             <a href="/" className="nav-link text-white font-weight-bold px-0">
                                 <i className="fa fa-user me-sm-1"></i>
@@ -27,7 +45,7 @@ function NavBar() {
                             </a>
                         </li>
                         <li className="nav-item d-xl-none ps-3 d-flex align-items-center">
-                            <a href="/" className="nav-link text-white p-0" id="iconNavbarSidenav">
+                            <a href="#!" onClick={hideSideNavbar} className="nav-link text-white p-0" id="iconNavbarSidenav">
                                 <div className="sidenav-toggler-inner">
                                     <i className="sidenav-toggler-line bg-white"></i>
                                     <i className="sidenav-toggler-line bg-white"></i>
@@ -49,7 +67,7 @@ function NavBar() {
                                     <a className="dropdown-item border-radius-md" href="/">
                                         <div className="d-flex py-1">
                                             <div className="my-auto">
-                                                <img src="../assets/img/team-2.jpg" className="avatar avatar-sm  me-3 " />
+                                                <img src="../assets/img/team-2.jpg" className="avatar avatar-sm  me-3 " alt="error" />
                                             </div>
                                             <div className="d-flex flex-column justify-content-center">
                                                 <h6 className="text-sm font-weight-normal mb-1">
@@ -67,7 +85,7 @@ function NavBar() {
                                     <a className="dropdown-item border-radius-md" href="/">
                                         <div className="d-flex py-1">
                                             <div className="my-auto">
-                                                <img src="../assets/img/small-logos/logo-spotify.svg" className="avatar avatar-sm bg-gradient-dark  me-3 " />
+                                                <img src="../assets/img/small-logos/logo-spotify.svg" className="avatar avatar-sm bg-gradient-dark  me-3 " alt="error" />
                                             </div>
                                             <div className="d-flex flex-column justify-content-center">
                                                 <h6 className="text-sm font-weight-normal mb-1">
